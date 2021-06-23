@@ -3,8 +3,7 @@
 #Only a initial try - will improve code
 #Using SF object with lat-long geometry extracts each point monthly rainfall data and creates a dataframe
 
-ano<-list(2007)
-,2008,2009,2010,2011,2012,2013,2014)
+ano<-list(2007,2008,2009,2010,2011,2012,2013,2014)
 month<-list(01,02,03,04,05,06,07,08,09,10,11,12)
 
 # If prefers to download the files from google drive
@@ -19,7 +18,7 @@ for (year in ano){
 }  
 
 # Or get from folder where TRMM files are
-setwd("C:/Users/Anna Costola Pede/Desktop/Lacea Article/TRMM")
+setwd("C:/xxxxxxx/TRMM")
 
 #Ajusting name - They do not have the same pattern
 for (year in ano){
@@ -33,7 +32,7 @@ for (year in ano){
 }  
 
 
-#Opening as rasters and extracting data - using an sf object with geometry coordinates
+#Opening as rasters and extracting data
 id_frame<-SF_frame[,c("id")]
 pluv_data_frame<-data.table(id_frame)
 for (year in ano){
